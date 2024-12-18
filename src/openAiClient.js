@@ -140,31 +140,6 @@ class OpenAiClient {
     return translation;
   }
 
-  async translateText(textToTranslate, languageCode) {
-    // OpenAI API call to translate text
-    const translationResponse = await this.openai.chat.completions.create({
-      model,
-      messages: [
-        {
-          role: "system",
-          content: `You are an assistant that translates text into the following language code: ${languageCode}.
-            Your response must only contain the translation result and contain no additional information, explanations, or text.
-          `,
-        },
-        {
-          role: "user",
-          content: textToTranslate,
-        },
-      ],
-      temperature: 0.7,
-    });
-
-    const translation = translationResponse.choices[0].message.content.trim();
-    console.log("[OpenAiClient] translateText:", translation);
-
-    return translation;
-  }
-
   async summarizeMessages(content, languageCode) {
     const prompt = `
       Messages:
