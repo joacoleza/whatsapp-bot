@@ -1,0 +1,34 @@
+# Node.js dependencies
+node_modules/
+
+# Environment files
+.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor settings
+.vscode/
+.idea/
+
+# Build and cache
+dist/
+build/
+*.cache
+
+# Temporary files
+*.tmp
+*.swp
+*.log
+
+# OS-specific files
+*.bak
+
+# whatsapp-web.js
+.wwebjs**
