@@ -81,7 +81,7 @@ client.on("message_create", async (message) => {
         );
         message.reply(`${whatsappBotMessageHeader}\n\n${resultRecipe}`);
       } else {
-        const textToTranslate = `Unknown command. You can ask me to tell a joke or summarize the last X messages. Please retry.`;
+        const textToTranslate = `Unknown command. You can ask me to tell a joke, a cooking recipe or summarize the last X messages. Please retry.`;
         const unknownCommandResponse =
           languageCode === "en"
             ? textToTranslate
